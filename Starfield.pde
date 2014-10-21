@@ -15,6 +15,7 @@ void setup()
 		colorThree[i]=(int)(Math.random()*256);
 	}
 	a[299]= new OddballParticle();
+	a[298]= new JumboParticle();
 }
 void draw()
 {
@@ -98,5 +99,13 @@ class OddballParticle implements Particle
 	{
 		fill(255,0,0);
 		ellipse((float)dX,(float)dY,30,30);
+	}
+}
+class JumboParticle extends OddballParticle
+{
+	void show()
+	{
+		fill(0,0,255);
+		ellipse((float)dX,(float)dY,40,40);
 	}
 }
